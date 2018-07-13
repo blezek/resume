@@ -572,10 +572,21 @@
     \ifempty{#2#3}
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+       \entrypositionstyle{#1} & \entrydatestyle{#4}  \\}
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
 }
+
+%% % Usage: \cventry*{<position>}{<date>}{<description>}
+%% \newcommand*{\cventryshort}[3]{%
+%%   \vspace{-2.0mm}
+%%   \setlength\tabcolsep{0pt}
+%%   \setlength{\extrarowheight}{0pt}
+%%   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+%%     \entrypositionstyle{#1} & \entrydatestyle{#2} \\
+%%     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#3}}
+%%   \end{tabular*}%
+%% }
 
 % Define an environment for cvsubentry
 \newenvironment{cvsubentries}{%
@@ -637,6 +648,24 @@
 	\skilltypestyle{#1} & \skillsetstyle{#2} \\
 }
 
+% Define an environment for cvpublications
+\newenvironment{cvpublications}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2.0mm}
+  \begin{center}
+    \setlength\tabcolsep{1ex}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth * \real{0.9}}}
+}{%
+    \end{tabular*}
+  \end{center}
+}
+% Define a line of cv information(skill)
+% Usage: \cvskill{<type>}{<skillset>}
+\newcommand*{\cvpublication}[1]{%
+  \skillsetstyle{#1} \\
+}
+
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
   \vspace{-4.0mm}
@@ -644,6 +673,19 @@
   \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
     \setlength{\parskip}{0pt}
     \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{-4.0mm}
+}
+
+%% Starred version, no bullet
+\newenvironment{cvitems*}{%
+  \vspace{-4.0mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemi}{}
 }{%
   \end{itemize}
   \end{justify}

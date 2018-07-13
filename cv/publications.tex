@@ -1,0 +1,68 @@
+%% See https://tex.stackexchange.com/questions/297365/how-to-use-bibtex-for-putting-a-nice-publication-list-in-resume-with-document-cl
+%% for details on making this work
+\cvsection{Selected Publications}
+
+  \nocite{blezek2007}
+  \nocite{hancu2005}
+  \nocite{peter2017}
+  \nocite{kapur2016}
+  \nocite{erickson2014}
+  \nocite{stepan-buksakowska2014}
+  \nocite{langer2013}
+  \nocite{dixon2009}
+  \nocite{hardy2008}
+  \nocite{jack2008short}
+  \nocite{lowekamp2013a}
+  \nocite{ratai2008}
+  \nocite{fletcher2015}
+  \nocite{ehman2014}
+  \nocite{korfiatis2015}
+  \nocite{li2014}
+  \nocite{yang2011}
+
+\begingroup
+\renewcommand{\section}[2]{}%
+\skillsetstyle{\bibliography{Blezek}}
+\endgroup
+
+%% \begin{cvpublications}
+%%   \cvpublication{\bibentry{blezek2007}}
+%%   \cvpublication{\bibentry{hancu2005}}
+%%   \cvpublication{\bibentry{peter2017}}
+%%   %% \cvpublication{\bibentry{kapur2016}}
+%%   \cvpublication{\bibentry{erickson2014}}
+%%   \cvpublication{\bibentry{stepan-buksakowska2014}}
+%%   %% \cvpublication{\bibentry{langer2013}}
+%%   \cvpublication{\bibentry{dixon2009}}
+%%   \cvpublication{\bibentry{hardy2008}}
+%%   \cvpublication{\bibentry{jack2008}}
+%%   %% \cvpublication{\bibentry{lowekamp2013a}}
+%%   \cvpublication{\bibentry{ratai2008}}
+%%   \cvpublication{\bibentry{fletcher2015}}
+%%   \cvpublication{\bibentry{ehman2014}}
+%%   \cvpublication{\bibentry{korfiatis2015}}
+%%   %% \cvpublication{\bibentry{li2014}}
+%%   \cvpublication{\bibentry{yang2011}}
+%% \end{cvpublications}
+
+
+%% \begin{cvhonors}
+%%   \bibentry{blezek:anestesiology} && \\
+%%   \bibentry{blezek:anestesiology} && 
+%% \end{cvhonors}
+
+  
+
+%% \begin{cvparagraph}
+%%       \begin{cvitems} % Description(s)
+%%         \item {Introduced the history of web technology and the JAM stack which is for the modern web application development.}
+%%         \item {Introduced how to freely host the web application with high performance utilizing global CDN services.}
+%%       \end{cvitems}
+
+%% \nobibliography{Blezek.bib}
+%% \bibliographystyle{unsrt}
+%%       \begin{cvitems} % Description(s)
+%%       \item{\bibentry{blezek:anesthesiology}}
+%%       \end{cvitems}
+
+%% \end{cvparagraph}
