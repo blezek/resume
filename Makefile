@@ -8,5 +8,7 @@ CV_SRCS = $(shell find cv -name '*.tex')
 
 DanielBlezek.pdf: DanielBlezek.tex $(CV_SRCS)
 	xelatex $<
+	xelatex $<
+	xelatex $<
 clean:
 	rm -f *.pdf
